@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 04, 2026 at 10:12 AM
+-- Generation Time: Jan 04, 2026 at 02:57 PM
 -- Server version: 8.0.40
 -- PHP Version: 8.4.1
 
@@ -44,7 +44,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `avatar`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'SUPER ADMIN', 'admin@example.com', NULL, '$2y$12$g4/cA7w64M2ykcl12uTkEODQsnTlZfZ9vBypzRUsvsMl8qscmscTe', NULL, '2026-01-03 22:53:53', '2026-01-03 22:53:53');
+(1, NULL, 'SUPER ADMIN', 'admin@example.com', NULL, '$2y$12$uI.KZh6Gdbo7vL.wVF4guu8/ukqNw6A2MOjbgKl/9skvPsvTbsAtu', 'NZtba11KtV4vl6G4Nwr7yysvlAeCs3FSyRTdKqQcQ1MZEZrNyNyyxcUBYiX1', '2026-01-03 22:53:53', '2026-01-04 08:56:05');
 
 -- --------------------------------------------------------
 
@@ -175,7 +175,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('7ORqYdEsqPK9lm5BMShSOXXvtKjIQoYVKOUCYaUv', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoid2ZNTnRJZ3MwRHl4T1pXYXd0a3VRMTEzMHVHTk5rMWsxNkJ4c3FDdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9fQ==', 1767521185);
+('7ORqYdEsqPK9lm5BMShSOXXvtKjIQoYVKOUCYaUv', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoid2ZNTnRJZ3MwRHl4T1pXYXd0a3VRMTEzMHVHTk5rMWsxNkJ4c3FDdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9fQ==', 1767521185),
+('SO3ejMjktBkkgt3XFZFl9jvGIph7EEv8lY2SlQSY', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibnJkSUZIYVVKY0RiendRbGpXZVNtdmlCREZBanRWalVBdXp1NUhVNCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9sb2dpbiI7czo1OiJyb3V0ZSI7czoxMToiYWRtaW4ubG9naW4iO319', 1767538591);
 
 -- --------------------------------------------------------
 
