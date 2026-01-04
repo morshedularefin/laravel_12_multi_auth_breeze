@@ -28,7 +28,7 @@ class RedirectIfAuthenticated
 
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                return redirect($this->redirectTo($request,$guard));
+                return redirect($this->redirectTo($request, $guard));
             }
         }
 
@@ -38,7 +38,7 @@ class RedirectIfAuthenticated
     /**
      * Get the path the user should be redirected to when they are authenticated.
      */
-    protected function redirectTo(Request $request, string $guard = 'web'): ?string
+    protected function redirectTo(Request $request, ?string $guard = 'web'): ?string
     {
         return static::$redirectToCallback
             ? call_user_func(static::$redirectToCallback, $request)
@@ -48,7 +48,7 @@ class RedirectIfAuthenticated
     /**
      * Get the default URI the user should be redirected to when they are authenticated.
      */
-    protected function defaultRedirectUri(string $guard): string
+    protected function defaultRedirectUri(?string $guard): string
     {
         if($guard == 'web') {
             return route('dashboard');
