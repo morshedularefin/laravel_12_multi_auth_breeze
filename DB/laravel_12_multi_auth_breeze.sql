@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 04, 2026 at 02:57 PM
+-- Generation Time: Jan 05, 2026 at 09:03 AM
 -- Server version: 8.0.40
 -- PHP Version: 8.4.1
 
@@ -44,7 +44,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `avatar`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'SUPER ADMIN', 'admin@example.com', NULL, '$2y$12$uI.KZh6Gdbo7vL.wVF4guu8/ukqNw6A2MOjbgKl/9skvPsvTbsAtu', 'NZtba11KtV4vl6G4Nwr7yysvlAeCs3FSyRTdKqQcQ1MZEZrNyNyyxcUBYiX1', '2026-01-03 22:53:53', '2026-01-04 08:56:05');
+(2, NULL, 'SUPER ADMIN', 'admin@example.com', '2026-01-05 02:56:17', '$2y$12$oXzFEniYzIKAZ/DQIPs.WeQ8bv0F9e8luAwQEbT.AQleCpb6W2/xW', 'OO0MEqUkHRC1jfYS0vltBbtQU5Zs5himL3MPNyCSbGl4smHGGmJv6r6CQxjx', '2026-01-05 02:56:17', '2026-01-05 03:00:40');
 
 -- --------------------------------------------------------
 
@@ -57,6 +57,16 @@ CREATE TABLE `cache` (
   `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cache`
+--
+
+INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
+('laravel-cache-1b6453892473a467d07372d45eb05abc2031647a', 'i:1;', 1767600375),
+('laravel-cache-1b6453892473a467d07372d45eb05abc2031647a:timer', 'i:1767600375;', 1767600375),
+('laravel-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0', 'i:2;', 1767600451),
+('laravel-cache-da4b9237bacccdf19c0760cab7aec4a8359010b0:timer', 'i:1767600451;', 1767600451);
 
 -- --------------------------------------------------------
 
@@ -175,8 +185,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('7ORqYdEsqPK9lm5BMShSOXXvtKjIQoYVKOUCYaUv', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoid2ZNTnRJZ3MwRHl4T1pXYXd0a3VRMTEzMHVHTk5rMWsxNkJ4c3FDdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7czo1OiJyb3V0ZSI7Tjt9fQ==', 1767521185),
-('SO3ejMjktBkkgt3XFZFl9jvGIph7EEv8lY2SlQSY', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoibnJkSUZIYVVKY0RiendRbGpXZVNtdmlCREZBanRWalVBdXp1NUhVNCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9sb2dpbiI7czo1OiJyb3V0ZSI7czoxMToiYWRtaW4ubG9naW4iO319', 1767538591);
+('bcqkz8DtAWCUqtaM8fyFbuZU2s6Ksl8FDt1iBGgD', NULL, '127.0.0.1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiREtpYVJ1TjhyakdzckQxdmpMOWJucDJnWm9xV0NzUHgwZmxKWkRFSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MzM6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9sb2dpbiI7czo1OiJyb3V0ZSI7czoxMToiYWRtaW4ubG9naW4iO31zOjM6InVybCI7YToxOntzOjg6ImludGVuZGVkIjtzOjM3OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYWRtaW4vZGFzaGJvYXJkIjt9fQ==', 1767603650);
 
 -- --------------------------------------------------------
 
@@ -200,7 +209,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Peter', 'peter@example.com', NULL, '$2y$12$2z/IYGsOfdQoLN1vPDxPOOXVS6q5iKMq.OKMg.4upr./Sx.UwBIA.', NULL, '2026-01-03 21:47:53', '2026-01-03 21:47:53');
+(2, 'Peter', 'peter@example.com', '2026-01-05 02:07:08', '$2y$12$J37Sp3FBBEih5s1jNpPMe.FuGV1lRzuH9p3wCewMFACL.4V1Sao0u', NULL, '2026-01-05 02:00:10', '2026-01-05 02:07:08'),
+(4, 'Smith', 'smith@example.com', '2026-01-05 02:05:15', '$2y$12$AyVYI3G9vNS3dv2Pfh5mSuXGD022cjtLOIi646/jmV3BN2vfpdAri', NULL, '2026-01-05 02:03:25', '2026-01-05 02:05:15');
 
 --
 -- Indexes for dumped tables
@@ -280,7 +290,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -304,7 +314,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
